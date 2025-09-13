@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Labrada", serif;
+}
+
+body {
+  min-height: 200vh;
+  position: relative;
+  color: black;
+  background: #f1f6f9;
+}
+
+.fixed {
+  height: 12vh;
+  position: sticky;
+  padding: 12px;
+  margin: 0;
+  margin-bottom: 1%;
+  top: 0;
+  background: #212a3e;
+  z-index: 12;
+}
+
+.logo-text {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  filter: invert(1);
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.insider {
+  position: absolute;
+}
+
+.home-icon {
+  filter: invert(1);
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.edit_emp {
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  filter: invert(1);
+}
+
+.task {
+  top: 50%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  filter: invert(1);
+}
+
+.leave {
+  top: 50%;
+  left: 74%;
+  transform: translate(-50%, -50%);
+  filter: invert(1);
+}
+
+.logout {
+  top: 50%;
+  left: 92%;
+  transform: translate(-50%, -50%);
+  filter: invert(1);
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #212a3e;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

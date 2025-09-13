@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Labrada", serif;
+}
+
+body {
+  min-height: 200vh;
+  position: relative;
+  color: black;
+  background: #f1f6f9;
+}
+.fixed {
+  height: 12vh;
+  position: sticky;
+  padding: 12px;
+  margin: 0;
+  margin-bottom: 1%;
+  top: 0;
+  background: #212a3e;
+  z-index: 12;
+}
+
+.logo-text {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  filter: invert(1);
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.insider {
+  position: absolute;
+}
+
+.home-icon {
+  filter: invert(1);
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.edit_emp {
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  filter: invert(1);
+}
+
+.task {
+  top: 50%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  filter: invert(1);
+}
+
+.leave {
+  top: 50%;
+  left: 74%;
+  transform: translate(-50%, -50%);
+  filter: invert(1);
+}
+
+.logout {
+  top: 50%;
+  left: 92%;
+  transform: translate(-50%, -50%);
+  filter: invert(1);
+}
+
+h2 {
+  top: 15rem;
+  margin-left: 1rem;
+}
+
+table {
+  margin: 1rem;
+  margin-top: 1rem;
+  width: 95vw;
+}
+
+table,
+tr,
+th,
+td,
+caption {
+  border: 2px solid #9ba4b5;
+  border-collapse: collapse;
+  padding: 0.5rem;
+  background: #9ba4b5;
+}
+
+tr,
+th,
+td {
+  font-size: 1rem;
+}
+
+td {
+  text-align: center;
+}
+
+th {
+  background: #394867;
+  border: 1px solid #394867;
+}
+
+input,
+button {
+  position: relative;
+  margin: 1rem;
+  font: inherit;
+}
+
+button:hover {
+  box-shadow: 1px 3px 4px #1e161d;
+}
+
+#addButton {
+  position: absolute;
+  padding: 12px 26px;
+  border: 0;
+  font-size: 16px;
+  transition: all 150ms ease-in-out;
+
+  border-radius: 14px;
+  border: 1px solid #394867;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset,
+    rgba(0, 0, 0, 0.07) 0 1px 1px, rgba(0, 0, 0, 0.07) 0 2px 2px,
+    rgba(0, 0, 0, 0.07) 0 4px 4px;
+  color: #000000;
+  font-weight: 600;
+  background-image: linear-gradient(180deg, #5a71a0 0%, #394867 100%);
+}
+
+#addButton:hover {
+  box-shadow: 1px 3px 4px #83817c;
+  filter: brightness(1.5);
+}
+
+#addButton:active {
+  transform: scale(1);
+}
+
+.delete-btn {
+  top: 0;
+  padding: 3px 5px;
+  border: 0;
+  font-size: 16px;
+  transition: all 150ms ease-in-out;
+
+  border-radius: 14px;
+  border: 1px solid red;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset,
+    rgba(0, 0, 0, 0.07) 0 1px 1px, rgba(0, 0, 0, 0.07) 0 2px 2px,
+    rgba(0, 0, 0, 0.07) 0 4px 4px;
+  color: #000000;
+  font-weight: 600;
+  background-image: linear-gradient(180deg, rgb(211, 74, 74) 0%, red 100%);
+  filter: brightness(1.4);
+}
+
+.delete-btn:hover {
+  box-shadow: 1px 3px 4px rgb(126, 1, 1);
+  filter: brightness(1.5);
+}
+
+.delete-btn:active {
+  transform: scale(1);
+}
+
+.update-btn {
+  top: 0;
+}
+
+.update-btn {
+  top: 0;
+  padding: 3px 5px;
+  border: 0;
+  font-size: 16px;
+  transition: all 150ms ease-in-out;
+
+  border-radius: 14px;
+  border: 1px solid green;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset,
+    rgba(0, 0, 0, 0.07) 0 1px 1px, rgba(0, 0, 0, 0.07) 0 2px 2px,
+    rgba(0, 0, 0, 0.07) 0 4px 4px;
+  color: #000000;
+  font-weight: 600;
+  background-image: linear-gradient(180deg, rgb(4, 181, 4) 0%, green 100%);
+  filter: brightness(1.4);
+}
+
+.update-btn:hover {
+  box-shadow: 1px 3px 4px rgb(2, 84, 2);
+  filter: brightness(1.5);
+}
+
+.update-btn:active {
+  transform: scale(1);
+}
+
+#itemTable:hover {
+  filter: brightness(1.2);
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #212a3e;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

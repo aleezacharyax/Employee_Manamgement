@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Page</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the AEMS Employee Portal</h1>
+    </header>
+    <div class="fixed">
+        <p class="logo-text">AEMS</p>
+        <a href="index.html"><img class="home-icon insider" src="../Images/home_icon.png" alt="home" title="Home"
+                width="35" height="35"> </a>
+        <a href="../TASK PAGE/index.html"><img class="task-icon insider task" src="../Images/task_icon1.png"
+                alt="task-icon" title="Task Page" width="38" height="38"> </a>
+        <a href="../LEAVE_REQUEST/index.html"><img class="leave-icon insider leave" src="../Images/leave_icon.png"
+                alt="leave-icon" title="Leave Page" width="36" height="36"> </a>
+        <a href=""><img class="logout-icon insider logout" src="../Images/logout_icon.png" alt="leave-icon"
+                title="Leave Page" width="36" height="36"> </a>
+    </div>
+    <main>
+        <section class="profile">
+            <h2>My Profile</h2>
+            <form>
+                <label for="userId">User ID:</label>
+                <span th:text="${userID}"></span>
+                <label for="name">Full Name:</label>
+                <span th:text="${fullName}"></span>
+                <label for="department">Email:</label>
+                <span th:text="${email}"></span>
+                <label for="position">Phone Number:</label>
+                <span th:text="${phoneNumber}"></span>
+            </form>
+        </section>
+    </main>
+    <section class="updates">
+        <h2>Updates</h2>
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th> Update Description</th>
+                    <th> Update Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr th:each="updateDetail: ${updateDetails}">
+                    <td th:text="${updateDetail.description}"></td>
+                    <td th:text="${updateDetail.uploadDate}"></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </section>
+    <footer>
+        <p>&copy; 2024 AEMS. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

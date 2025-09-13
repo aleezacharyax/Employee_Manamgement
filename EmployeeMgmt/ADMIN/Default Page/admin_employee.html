@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Page</title>
+    <link rel='stylesheet' href='CSS/styles.css'>
+
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Admin Page.</h1>
+    </header>
+    <div class="fixed">
+        <p class="logo-text">AEMS</p>
+        <a href="admin_employee.html"><img class="home-icon insider" src="../Images/home_icon.png" alt="home"
+                title="Home" width="35" height="35"> </a>
+        <a href="../EMPLOYEE_INFOnUPDATE/index.html"><img class="emp-icon insider edit_emp"
+                src="../Images/employee_icon.png" alt="emp-icon" title="Employee Information" width="38" height="38">
+        </a>
+        <a href="../TASK PAGE/index.html"><img class="task-icon insider task" src="../Images/task_icon1.png"
+                alt="task-icon" title="Task Page" width="38" height="38"> </a>
+        <a href="../LEAVE PAGE/index.html"><img class="leave-icon insider leave" src="../Images/leave_icon.png"
+                alt="leave-icon" title="Leave Page" width="36" height="36"> </a>
+        <a href=""><img class="logout-icon insider logout" src="../Images/logout_icon.png" alt="leave-icon"
+                title="Leave Page" width="36" height="36"> </a>
+    </div>
+    <main>
+        <section class="profile">
+            <h2>My Profile</h2>
+            <form>
+                <label for="userId">User ID:</label>
+                <span text="${userID}"></span>
+                <label for="name">Name:</label>
+                <span text="${fullName}"></span>
+                <label for="department">Email:</label>
+                <span text="${email}"></span>
+                <label for="position">Phone Number</label>
+                <span text="${phoneNumber}"></span>
+            </form>
+        </section>
+    </main>
+
+    <section class="updates">
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th> Update ID</th>
+                    <th> Update Description</th>
+                    <th> Update Date</th>
+                    <th> Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr each="updateDetail: ${updateDetails}">
+                    <td text="${updateDetail.id}"></td>
+                    <td text="${updateDetail.description}"></td>
+                    <td text="${updateDetail.uploadDate}"></td>
+                    <td>
+                        <a href="@{/AdminPage/editUpdate/{id}(id=${updateDetail.getId()})}" class="btn btn-primary">
+                            <button class="update-btn"> Update</button> </a>
+                        <a href="@{/AdminPage/{id}(id=${updateDetail.getId()})}" class="btn btn-danger"><button
+                                class="delete-btn"> Delete </button></a>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+        <form action="@{/AdminPage/PostNewUpdate}" method="get">
+            <button type="submit" id="addButton">Post Updates</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 AEMS. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

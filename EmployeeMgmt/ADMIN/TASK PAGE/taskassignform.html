@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Task Assign Page</title>
+    <link rel="stylesheet" href="CSS/taskpageadminform.css">
+</head>
+
+<body>
+    <section class="login">
+        <h1 class="text-center">Enter Task Details </h1>
+        <div class="card-body">
+            <form onsubmit="submitForm()">
+                <div class="input input0">
+                    <label> Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="John Cena" required>
+                </div>
+                <div class="input input1">
+                    <label> Assign Task To</label>
+                    <input type="number" id="userID" class="form-control" placeholder="Enter User ID" required>
+                </div>
+                <div class="input input1">
+                    <label> Task Description </label>
+                    <input type="text" id="taskDescription" class="form-control" placeholder="Enter Description"
+                        required>
+                </div>
+                <div class="input input1">
+                    <label> Assigned On </label>
+                    <input type="date" id="assignedOn" class="form-control" placeholder="Enter Assigned Date" required>
+                </div>
+                <div class="input input1">
+                    <label> Deadline </label>
+                    <input type="date" id="deadline" class="form-control" placeholder="Enter Assigned Date" required>
+                </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+<!--<script src="taskpageadminform.js"></script> -->
+
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Page</title>
+        <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+        <div class="fixed">
+                <p class="logo-text">AEMS</p>
+                <a href="../Default Page/admin_employee.html"><img class="home-icon insider"
+                                src="../Images/home_icon.png" alt="home" title="Home" width="28" height="28"> </a>
+                <a href="../EMPLOYEE_INFOnUPDATE/index.html"><img class="emp-icon insider edit_emp"
+                                src="../Images/employee_icon.png" alt="emp-icon" title="Employee Information" width="32"
+                                height="32">
+                </a>
+                <a href="../TASK PAGE/index.html"><img class="task-icon insider task" src="../Images/task_icon1.png"
+                                alt="task-icon" title="Task Page" width="30" height="30"> </a>
+                <a href="../LEAVE PAGE/index.html"><img class="leave-icon insider leave" src="../Images/leave_icon.png"
+                                alt="leave-icon" title="Leave Page" width="30" height="30"> </a>
+                <a href="../LEAVE_REQUEST/index.html"><img class="logout-icon insider logout"
+                                src="../Images/logout_icon.png" alt="leave-icon" title="Leave Page" width="30"
+                                height="30"> </a>
+        </div>
+        <div id="myDIV" class="header">
+                <h2>My To Do List</h2>
+                <input type="text" id="myInput" placeholder="Enter To-do">
+                <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+
+        <ul id="myUL">
+                <li>Meeting at 9</li>
+                <li class="checked">Finish Task1</li>
+                <li>Presentation about our Project</li>
+                <li>Confirm Client Requirement</li>
+                <li>Read a book</li>
+                <li>Organize office</li>
+        </ul>
+        <div class="header-gap">
+
+        </div>
+        <div id="myDIV" class="header">
+                <h2>Assign Task</h2>
+
+        </div>
+        <table id="itemTable">
+                <thead>
+                        <tr>
+                                <th>Name</th>
+                                <th>User ID</th>
+                                <th>Task Desciption</th>
+                                <th>Assigned on</th>
+                                <th>Deadline</th>
+                                <th>Status</th>
+                                <th>Delete</th>
+                        </tr>
+                </thead>
+        </table>
+        <button id="addButton">Assign Task</button>
+
+</body>
+
+<script src="taskpageadmin.js"></script>
+<script src="taskpageadmintodolist.js"></script>
+
+
+</html>
